@@ -12,21 +12,6 @@
   margin: 0;
 }
 
-.header-container {
-  color: #5995DA;
-  background-color: #D6E9FE;
-  display: flex;
-  justify-content: center;
-}
-
-.header {
-  width: 900px;
-  height: 300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
 .menu-container {
   color: #fff;
   background-color: #5995DA;  /* Blue */
@@ -49,14 +34,29 @@
   padding-left: 20px;
 }
 
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 .social,
 .subscribe {
   align-self: flex-end;
   margin-bottom: 20px;
-}
-
-.login {
-  margin-left: 20px;
 }
 
 .logo {
@@ -73,6 +73,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
 }
 
 .photo-grid-item {
@@ -94,22 +96,37 @@
 }
 
 .footer-two {
-  flex: 1;
+  flex: 2;
 }
 
 .footer-one,
 .footer-three {
   background-color: #5995DA;
-  flex: initial;
+  flex: auto;
   width: 300px;
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-  .first-item {
-    order: -3
+  body {
+    background-color: #F09A9D; /* Red */
+
   }
-  .last-item {
-    order: 2
+  .photo-grid first-item {
+    order: 3
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E; /* Yellow */
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #B2D6FF; /* Blue */
   }
 }
