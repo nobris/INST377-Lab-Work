@@ -66,8 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
     current.forEach(index => {
       squares[currentPosition + index].classList.remove('tetromino');
       //squares[currentPosition + index].style.backgroundColor = ''
-    })
+    });
   }
 
-  draw()
+  // make the tetromino move down every second
+  timerId = setInterval(moveDown, 1000);
+
+  // move down function
+  function moveDown() {
+    undraw();
+    currentPosition += width;
+    draw();
+  }
+
+  draw();
 });
