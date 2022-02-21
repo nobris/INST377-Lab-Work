@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [0,width,width+1,width*2+1],
     [width+1, width+2,width*2,width*2+1],
     [0,width,width+1,width*2+1],
-    [width+1, width+2,width*2,width*2+1]
+    [width+1, width+2,width*2,width*2 + 1]
   ];
 
   const tTetromino = [
@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentPosition = 4;
   let currentRotation = 0;
+
+  console.log(theTetrominoes[0][0]);
 
   // randomly select a Tetromino and its first rotation
   let random = Math.floor(Math.random()*theTetrominoes.length);
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function checkRotatedPosition(P) {
-    P = P || currentPosition // get current position.  Then, check if the piece is near the left side.
+    P = P || currentPosition; // get current position.  Then, check if the piece is near the left side.
     if ((P+1) % width < 4) { // add 1 because the position index can be 1 less than where the piece is (with how they are indexed).
       if (isAtRight()) { // use actual position to check if it's flipped over to right side
         currentPosition += 1; // if so, add one to wrap it back around
@@ -158,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (P % width > 5) {
       if (isAtLeft()) {
         currentPosition -= 1;
-      checkRotatedPosition(P);
+        checkRotatedPosition(P);
       }
     }
   }
