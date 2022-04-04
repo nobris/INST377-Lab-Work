@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
+    ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+  background-color: darkslategray;
+  min-height: 100vh;
+  /* overflow: auto; */
+}
+
+/* Page Layout */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.columns form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.container {
+  max-width: 960px;
+  margin-top: 25px;
+}
+
+.header {
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: hsl(48, 100%, 67%);
+}
+
+.page_item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #efefef;
+  height: fit-content;
+  margin: 0 20px 20px 20px;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.control {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.main_form p {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: hsl(217, 71%, 53%);
+  width: 6.5em;
+}
